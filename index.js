@@ -17,3 +17,9 @@ function exactMatch(drivers, obj) {
     for (x in obj) {return driver[x] == obj[x]}
   })
 }
+
+function exactMatchToList(drivers, obj) {
+  return exactMatch(drivers, obj).map (function(driver) {
+    return driver.name;
+  })
+}
